@@ -1,0 +1,127 @@
+.note{
+  color: #333;
+  position: absolute;
+  width: 160px;
+  border-radius: 10px 10px 0px 0px; 
+  margin: 30px 10px;
+  transition: all 0.5s ease;
+
+  .note-snag{
+    position: absolute;
+    top: -20px;
+    left: 48%;
+    width: 18px;
+    height: 21px;
+    background-image: url(https://dk7jqzmygmr3q.cloudfront.net/ml/neducatio/5b633eca-5c8f-4d4b-8ce0-cf9618e9aec6.image?v=1&type=png);
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .note-before{
+    content: "";
+    background: #ffe168;
+    border-bottom: 20px solid #f0af1f;
+    border-right: 20px solid transparent;
+    width: 140px;
+    position: absolute;
+    bottom: -20px;
+    right:10px;
+    transform: skew(-45deg);
+  }
+
+  .note-head{
+    background-color: #ea9b35;
+    cursor: move;
+    color: #666;
+    height: 20px;
+    width: 100%;
+    padding: 5px 0px;
+    border-radius: 10px 10px 0px 0px; 
+    text-align: center;
+    font-size: 20px;
+    transition: background 0.5s ease;
+
+    &:hover .delete{
+      opacity: 1;
+    }
+
+    &:before{
+      position: absolute;
+      left: 50%;
+      top: -11px;
+      margin-left: -32px;
+      content: ' ';
+      display: block;
+      width: 64px;
+      height: 18px;
+      background: #35bba3;
+    }
+
+    &:after {
+      position: absolute;
+      left: 50%;
+      margin-left: 32px;
+      top: -11px;
+      z-index: -1;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid #299683;
+      border-top: 18px solid transparent;
+    }
+  }
+
+  .note-ct{
+    padding: 10px;
+    background-color: #efb04e;
+    outline: none;
+  }
+
+  .username{
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    font-size: 10px;
+    cursor: pointer;
+  }
+
+  .delete {
+    position: absolute;
+    top: -2px;
+    right: 5px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity .3s;
+  }
+
+}
+
+.note-bottom{
+  position:absolute;
+	right:20px;
+	bottom:-20px;
+  border-bottom: 20px solid rgba(0,0,0,0);
+  border-left: 20px solid transparent;
+  
+  .note-after{
+    content:'';
+    background: #f0af1f;
+    width: 120px;
+    height:20px;
+    position:absolute;
+    bottom:-20px;
+    right:20px;
+  }
+}
+
+
+.draggable{
+  opacity: 0.5;
+  cursor:move;
+  transition: none;
+}
+
+
